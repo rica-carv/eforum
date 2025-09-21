@@ -30,10 +30,9 @@ class eforum_parse
 			parent::__construct();
 				$this->e107 = e107::getInstance();
 		*/
-
 		
 		$arrbread = e107::breadcrumb();
-		if ((strpos( e_PAGE, "forum")!==false) && !defined('EFBCCONSTR_EXEC') && $arrbread){
+		if ((strpos(defined('e_PAGE')?e_PAGE:"", "forum")!==false) && !defined('EFBCCONSTR_EXEC') && $arrbread){
 		define('EFBCCONSTR_EXEC', true);
 		$this->modbread($arrbread);
 		}	

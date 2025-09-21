@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Plugin name="Eforum" version="2024" date="2024-08-18" compatibility="2.3.3" installRequired="false" >
+<e107Plugin name="Eforum - E107 Extended/Enhanced Forum" lan="EFORUM_FULL_NAME" version="0.1.0b" date="2025-02-05" compatibility="2.3" installRequired="false" xhtmlcompliant="true" >
+	<author name="rica-carv" email="selo.fan@gmail.com" url="https://github.com/rica-carv" />
+		<description lan="LAN_EFORUM_DESC">E107 Extended forum management area</description>
+	<keywords>
+		<word>enhancement</word>
+		<word>forum</word>
+		<word>info</word>
+	</keywords>
 	<category>menu</category>
 </e107Plugin>

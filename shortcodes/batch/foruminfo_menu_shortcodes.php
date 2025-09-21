@@ -19,6 +19,9 @@ class plugin_eforum_foruminfo_menu_shortcodes extends e_shortcode
 	public $newFlagList;
 */
 
+private $forum_sc;
+private $viewforum_sc;	
+
 	function __construct()
 	{
 //		$this->forum_rules = function_exists('forum_rules') ? forum_rules('check') : '';
@@ -174,8 +177,10 @@ function sc_efim_userinfox()
 function sc_efim_dropdown()
 {
 //	var_dump($this->getSCvar('drop_options'));
-	$options = $this->getSCvar('drop_options');
-	$btndrop_class = $this->getSCvar('btndrop_class');
+//	$options = $this->getSCvar('drop_options');
+//	$btndrop_class = $this->getSCvar('btndrop_class');
+	$options = $this->var['drop_options'];
+	$btndrop_class = $this->var['btndrop_class'];
 	// Para n�o ter separador ao fim...
 if(empty($options[count($options)-1])) {
     unset($options[count($options)-1]);

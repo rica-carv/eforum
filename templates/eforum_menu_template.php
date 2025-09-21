@@ -11,11 +11,26 @@ if (!defined('e107_INIT'))  exit;
 
 //$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_ICONKEY']		= 	"<div class='card col'>{---}</div>";
 //$SC_WRAPPER['EFIM_ICONKEY'] = "<div class='card col'>{---}</div>";
+//$SC_WRAPPER['EFIM_ICONKEY'] = "<p><br><div class='card forum-iconkey'><div class='card-header bg-info bg-gradient'><b>{LAN=FORUM_8011}</b></div><div class='card-body alert alert-info'>{---}</div></div>";
+//$EFORUM_MENU_WRAPPER['EFIM_ICONKEY'] = "»»»»»»»»»»".$FORUMGLOBAL_WRAPPER['ICONKEY'];
+//$NEWFORUMPOSTS_MENU_WRAPPER['main']['PERMS'] = "<div class='col-4 forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+//$SC_WRAPPER['EFIM_PERMS']			= "<p><br><div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+//$SC_WRAPPER['EFIM_USERLIST']			= "{LAN=ONLINE}<br>{---}<p><br>";
+//$EFORUM_MENU_WRAPPER['EFIM_PERMS']			= "<div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+//$SC_WRAPPER['EFIM_VIEWABLE_BY'] = "----------------<div class='col justify-content-center align-items-center'><div class='card text-bg-light'><div class='card-header'><b>{LAN=FORUM_8012}</b></div><div class='card-body alert alert-light mb-0'>{---}</div></div></div>";
+$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_ICONKEY'] = "<p><br><div class='card forum-iconkey'><div class='card-header bg-info bg-gradient'><b>{LAN=FORUM_8011}</b></div><div class='card-body alert alert-info'>{---}</div></div>";
+//$EFORUM_MENU_WRAPPER['EFIM_ICONKEY'] = "»»»»»»»»»»".$FORUMGLOBAL_WRAPPER['ICONKEY'];
+//$NEWFORUMPOSTS_MENU_WRAPPER['main']['PERMS'] = "<div class='col-4 forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_PERMS']			= "<p><br><div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_USERLIST']			= "{LAN=ONLINE}<br>{---}<p><br>";
+$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_VIEWABLE_BY'] = "<div class='col justify-content-center align-items-center'><div class='card bg-light'><div class='card-header'><b>{LAN=FORUM_8012}</b></div><div class='card-body alert alert-light mb-0'>{---}</div></div></div>"; 
+//$EFORUM_MENU_WRAPPER['foruminfo']['EFIM_ICONKEY']		= 	"<div class='card col'>{---}</div>";
+//$SC_WRAPPER['EFIM_ICONKEY'] = "<div class='card col'>{---}</div>";
 /////////$SC_WRAPPER['EFIM_ICONKEY'] = "<p><br>".$EFORUMGLOBAL_WRAPPER['ICONKEY'];
 //$EFORUM_MENU_WRAPPER['EFIM_ICONKEY'] = "»»»»»»»»»»".$FORUMGLOBAL_WRAPPER['ICONKEY'];
 //$NEWFORUMPOSTS_MENU_WRAPPER['main']['PERMS'] = "<div class='col-4 forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
-$SC_WRAPPER['EFIM_PERMS']			= "<br><div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
-$SC_WRAPPER['EFIM_USERLIST']			= "{LAN=ONLINE}<br>{---}<br>";
+//$SC_WRAPPER['EFIM_PERMS']			= "<br><div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
+//$SC_WRAPPER['EFIM_USERLIST']			= "{LAN=ONLINE}<br>{---}<br>";
 //$EFORUM_MENU_WRAPPER['EFIM_PERMS']			= "<div class='forum-perms justify-content-center d-flex align-items-center {PERMS:type=1}'>{---}</div>";
 
 /////////$EFORUM_MENU_TEMPLATE['perms_separator']	= $EFORUMGLOBAL_TEMPLATE['perms_separator'];
@@ -47,7 +62,8 @@ $EFORUM_MENU_TEMPLATE['foruminfo']['main'] 	= "	<div class='forummenu overflow-a
 										<p>
 										{EFIM_AFTERDROP}
 										";
-//$EFORUM_MENU_TEMPLATE['foruminfo']['end'] 	= "";
+
+										//$EFORUM_MENU_TEMPLATE['foruminfo']['end'] 	= "";
 										/// Enventualmente passara isto para um menu com tabs
 
 

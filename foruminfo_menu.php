@@ -10,11 +10,13 @@
 
 if (!defined('e107_INIT'))  exit;
 
-////var_dump (!e107::isInstalled('forum'));
+//return "adgdfffdsaf";
+//exit;
+//var_dump (e107::isInstalled('forum'));
 if (!e107::isInstalled('forum'))
 {
 //	e107::redirect();
-	return;
+	return null;
 }
 //e107::getMenu()->isVisible(array ('foruminfo_menu' => "1-forum/"));
 
@@ -29,10 +31,14 @@ forum_track.php
 Failsafe here
 */
 //$menuget = e107::getMenu();// ie. popup config details from within menu-manager.
-
+/*
+var_dump (e_PAGE);
+var_dump (stripos(e_PAGE, 'forum'));
+var_dump (!(stripos(e_PAGE, 'forum')!== false));
+*/
 ////var_dump (!e107::getMenu()->isVisible(array ('eforum_menu' => "1-/forum")));
-if (!e107::getMenu()->isVisible(array ('eforum_menu' => "1-/forum"))) {
-exit;
+if (!e107::getMenu()->isVisible(array ('eforum_menu' => "1-/forum")) || !(stripos(e_PAGE, 'forum')!== false)) {
+return null;
 }
 
 //e107::lan('forum','menu',true);  // English_menu.php or {LANGUAGE}_menu.php
@@ -143,9 +149,6 @@ if (!e107::getMenu()->isVisible(array ('menu_pages' => "1-/forum"))) {
 */
 //echo e_PAGE;
 //echo e_PAGETITLE;
-
-
-
 
 e107::lan('forum','menu',true);  // English_menu.php or {LANGUAGE}_menu.php
 //include_once(e_PLUGIN.'forum/forum_class.php');
@@ -577,7 +580,7 @@ if ($forum->checkPerm($thread->threadInfo['thread_forum_id'], 'post') && $thread
 // Construtor do dropdown para a p�gina principal do f�rum...
 // O shortcode {STATLINK} tamb�m est� no {USERINFOX}...
 //var_dump (sizeof($options)>1);
-if (sizeof($options)>1) {$options[] = "";} 
+if ($options>1) {$options[] = "";} 
 //var_dump (sizeof($options)>1);
 $options[] = '<a '.($options?'':'class="btn btn-default btn-block pull-left" ').'href="'.e_HTTP.'top.php?0.active">'.LAN_FORUM_0011.'</a>';
 
@@ -747,11 +750,9 @@ $template = e107::getTemplate('eforum', 'eforum_menu', 'foruminfo');
 //var_dump ($template);
 /////require_once (e_PLUGIN."eforum/eforum_menu_shortcodes.php");
 //var_dump ($sc);
-$sc = e107::getScBatch("foruminfo_menu", "eforum");
-//var_dump ($sc);
-$sc->setScVar("drop_options", $options);
-$sc->setScVar("btndrop_class", $btndrop_class);
-$sc->setScVar("afterdrop", $afterdrop);
+$sc = e107::getScBatch("foruminfo_menu", "eforum")->setVars(array("drop_options"=>$options, "btndrop_class"=>$btndrop_class, "afterdrop"=>$afterdrop));
+//$sc->setScVar("btndrop_class", $btndrop_class);
+//$sc->setScVar("afterdrop", $afterdrop);
 //var_dump ($options);
 
 $sc->wrapper('eforum_menu/foruminfo');
@@ -780,5 +781,3 @@ var_dump ($caption);
 ////}
 
 //new theme_forum_menu;
-
-
